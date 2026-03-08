@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home page</title>
+
+<!-- tailwind and daisy -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+
+
 </head>
 <body>
-    lalalalalal
+
+    <!-- navbar -->
+    <section class="flex flex-col gap-4     md:flex-row justify-between   items-center mt-3 mx-12  ">
+        <!-- left side -->
+  <div class="flex  gap-2 items-center">
+  <img  class="w-[35px]" src="./assets/github-logo.png">
+
+<h2 class="font-bold text-2xl">GitHub Issues Tracker</h2>
+  </div>
+
+<!-- right side -->
+  <div class="flex  gap-2 items-center">
+<div class="relative w-auto">
+    <i class="fa-solid fa-magnifying-glass   absolute  left-[10%] bottom-[13%]  -translate-y-1/2  z-10  opacity-40"></i>
+        <input type="text" placeholder=   " Search Issues..." class="input input-bordered w-full pl-10 " />
+</div>
+    <button class="btn btn-primary"> <i class="fa-solid fa-plus"></i> New Issue</button>
+  </div>
+  </section>
 </body>
 </html>
