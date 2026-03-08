@@ -23,9 +23,9 @@
 
 
 </head>
-<body class=" my-24  max-w-md mx-auto bg-base-400 rounded-md shadow-2xl ">
+<body class=" my-0.5  md:my-20  max-w-md mx-auto bg-base-400 rounded-md shadow-2xl ">
 
-    <div class="logo   w-[200px] mx-auto pt-24 pl-14">
+    <div class="logo   w-[200px] mx-auto pt-12 pl-14">
         <img src="./assets/github-logo.png">
     </div>
   
@@ -38,20 +38,36 @@
 <!-- form -->
 
 <div class="form ">
-        <div class="card bg-base-100 w-full max-w-sm shrink-0 pl-8 pb-10 ">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 pl-8 pb-1 ">
       <div class="card-body">
         <fieldset class="fieldset">
-          <label class="label font-semibold text-black text-xs">Username</label>
-          <input type="text" class="input text-blue-800 opacity-75" placeholder="Enter Username" />
-          <label class="label text-black text-xs font-semibold">Password</label>
-          <input type="password" class="input text-blue-800 opacity-75" placeholder="Enter Password" />
-          <button class="btn btn-primary mt-4">Login</button>
+          <label class="label font-semibold text-black text-[15px] opacity-90">Username</label>
+          <input id="userNaam" type="text" class="input text-blue-800 opacity-85" placeholder="Enter Username" />
+          <label class="label text-black text-[15px] opacity-90 font-semibold">Password</label>
+          <input id="userPass" type="password" class="input text-blue-800 opacity-85" placeholder="Enter Password" />
+          <button id="login-btn" class="btn btn-primary mt-4">Login</button>
         </fieldset>
       </div>
     </div>
 
 </div>
 
+<div class="text-center space-y-1 md:space-y-3 pb-7">
+    <div class="flex items-center my-2 ">
+    <div  class="flex-grow border-t border-gray-400 mx-5"></div>
+    <p class="font-semibold opacity-60 ">OR</p>
+    <div  class="flex-grow border-t border-gray-400 mx-5"></div>
+    </div>
+    <p class="text-blue-800 opacity-75">Demo Credentials:</p>
+    <div>
+<p> <span class="font-bold opacity-90">Username:
+</span> admin</p>
+    <p > <span class="font-bold opacity-90">Password: </span>  admin123 </p>
+    </div>
+    
+</div>
+
+<script src="./script/script.js"></script>
 </body>
 
 
