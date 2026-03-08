@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+
+      <!-- tailwind and daisy -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- font -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body class=" my-0.5  md:my-20  max-w-md mx-auto bg-base-400 rounded-md shadow-2xl ">
+
+    <div class="logo   w-[200px] mx-auto pt-12 pl-14">
+        <img src="./assets/github-logo.png">
+    </div>
+  
+<div class="mx-auto pt-6 text-center">
+<h2 class="font-bold text-2xl"> GitHub Issues Tracker</h2>
+        <p class="text-blue-800  opacity-50">Sign in to manage your issues</p>
+</div>
+
+
+<!-- form -->
+
+<div class="form ">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 pl-8 pb-1 ">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-semibold text-black text-[15px] opacity-90">Username</label>
+          <input id="userNaam" type="text" class="input text-blue-800 opacity-85" placeholder="Enter Username" />
+          <label class="label text-black text-[15px] opacity-90 font-semibold">Password</label>
+          <input id="userPass" type="password" class="input text-blue-800 opacity-85" placeholder="Enter Password" />
+          <button id="login-btn" class="btn btn-primary mt-4">Login</button>
+        </fieldset>
+      </div>
+    </div>
+
+</div>
+
+<div class="text-center space-y-1 md:space-y-3 pb-7">
+    <div class="flex items-center my-2 ">
+    <div  class="flex-grow border-t border-gray-400 mx-5"></div>
+    <p class="font-semibold opacity-60 ">OR</p>
+    <div  class="flex-grow border-t border-gray-400 mx-5"></div>
+    </div>
+    <p class="text-blue-800 opacity-75">Demo Credentials:</p>
+    <div>
+<p> <span class="font-bold opacity-90">Username:
+</span> admin</p>
+    <p > <span class="font-bold opacity-90">Password: </span>  admin123 </p>
+    </div>
+    
+</div>
+
+<script src="./script/script.js"></script>
+</body>
+
+
+
+</html>
