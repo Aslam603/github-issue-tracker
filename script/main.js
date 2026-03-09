@@ -2,14 +2,23 @@ let allIssues =[];
 
 async function loadIssues(){
 
+    const spinner = document.getElementById("loadingSpinner");
+    spinner.classList.remove("hidden")
+
+
+
     const res = await 
  fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
 
 
     const data = await res.json()
 
-    allIssues=data.data      ;
+    allIssues=data.data  ;
     displayIssues(allIssues)
+
+
+ spinner.classList.add("hidden"); 
+
 
 }
 
@@ -226,25 +235,14 @@ document.getElementById("modalClose").addEventListener("click", () => {
 });
 
 
+const searchInput = document.getElementById("searchInput");
 
-const searchInput = document.getElementById("searchInput")
+searchInput.addEventListener("input", function() {
+    const searchText = searchInput.value.toLowerCase();
 
-searchInput.addEventListener("input", function () {
+    const filteredIssues = allIssues.filter(issue =>
+        issue.title.toLowerCase().includes(searchText)
+    );
 
-  const searchText = searchInput.value.toLowerCase();
-
-  const issues = document.querySelectorAll(".issue-card");
-
-  issues.forEach(issue => {
-
-    const title = issue.querySelector(".issue-title").textContent.toLowerCase();
-
-    if (title.includes(searchText)) {
-      issue.style.display = "block"
-    } else {
-      issue.style.display = "none"
-    }
-
-  });
-
+    displayIssues(filteredIssues);
 });
