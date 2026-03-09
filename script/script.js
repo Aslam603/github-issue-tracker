@@ -8,7 +8,7 @@ document.getElementById("login-btn").addEventListener("click",function(){
 
 if(userId=="admin"  && userPasses=="admin123"){
     // alert("login success")S
-    window.location.assign("./main.html")
+    window.location.assign("main.html");
 } else{
     // alert("try again, info is not valid!!")
     return;
