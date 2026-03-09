@@ -47,10 +47,13 @@
 
   <section class="mx-40  mt-16 mb-5">
 <div  class="py-7 px-4 flex gap-3  border-red-50 rounded-md shadow-sm">
-    <button class="btn px-12">All</button>
-    <button class="btn px-12">Open</button>
-    <button class="btn px-12">Closed</button>
+    <button id="allBtn"     class="btn px-12   tibet ">All</button>
+    <button id="openBtn"      class="btn px-12 tibet    ">Open</button>
+    <button id="closeBtn"      class="btn px-12   tibet   ">Closed</button>
 </div>
+
+
+
   </section>
 
   <section class="mx-40   p-5   border-red-50 rounded-md shadow-sm  flex justify-between items-center">
@@ -58,7 +61,7 @@
 <div class="flex items-center">
 <img class="w-8 h-8 bg-gray-300 rounded-full m-4 p-1" src="./assets/Aperture.png">
 <div>
-    <h2 class="font-semibold text-xl">50 Issues</h2>
+    <h2  id="counter"    class="font-semibold text-xl">0 Issues</h2>
     <p class="opacity-55">Track and manage your project issues</p>
 </div>
 </div>
@@ -76,9 +79,11 @@
 
   </section>
 
+<div id="cardContainer"  class="grid grid-cols-4  gap-5   mx-40">
+
+</div>
 
 
-
-
+<script src="./script/main.js"></script>
 </body>
 </html>
