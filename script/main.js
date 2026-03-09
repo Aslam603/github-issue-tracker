@@ -182,7 +182,7 @@ container.appendChild(card);
 
 document.getElementById('allBtn').addEventListener("click", ()=>{
 
-    displayIssues(allIssues)
+    displayIssues(allIssues);
 
 })
 
