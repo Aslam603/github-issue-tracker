@@ -7,8 +7,8 @@ document.getElementById("login-btn").addEventListener("click",function(){
  const userPasses = userPassword.value;
 
 if(userId=="admin"  && userPasses=="admin123"){
-    // alert("login success")
-    window.location.assign("/main.html")
+    // alert("login success")S
+    window.location.assign("./main.html")
 } else{
     // alert("try again, info is not valid!!")
     return;
