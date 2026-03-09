@@ -106,6 +106,64 @@ ${labelsHTML}
 
 ` ;
 
+
+// modal
+
+card.addEventListener("click" , () =>{
+
+document.getElementById("modalTitle").textContent=issue.title;
+
+document.getElementById("modalDescription").textContent=issue.description;
+
+const statBtn = document.getElementById("modalStatus");
+statBtn.textContent = issue.status.toUpperCase();
+if(issue.status === "open"){
+    statBtn.className="px-4 py-2 rounded font semi-bold text-white bg-green-600";
+
+}else {
+    statBtn.className ="px-4 py-2 rounded font semi-bold text-white bg-red-500"
+}
+
+  const updatedDate = new Date(issue.updatedAt || issue.createdAt).toLocaleDateString();
+
+ document.getElementById("assigneeHere").textContent = `opened by ${issue.assignee || issue.author} • ${updatedDate}`;
+
+
+
+   const labelsContainer = document.getElementById("modalLabels");
+  labelsContainer.innerHTML = "";
+  if(issue.labels && issue.labels.length > 0) {
+    issue.labels.slice(0,5).forEach(label => {
+      let labelClass = "";
+      if(label.toLowerCase() === "bug") labelClass = "text-red-700 bg-red-100";
+      else if(label.toLowerCase() === "help wanted") labelClass = "text-yellow-700 bg-yellow-100";
+      else if(label.toLowerCase() === "enhancement") labelClass = "text-green-700 bg-green-100";
+      const btn = document.createElement("button");
+      btn.className = `px-3 py-1 text-xs rounded-md ${labelClass}`;
+      btn.textContent = label;
+      labelsContainer.appendChild(btn);
+    });
+  }
+
+  
+  document.getElementById("modalAssignee").textContent = issue.assignee || "Unassigned";
+
+    const priorityBtn = document.getElementById("modalPriority");
+  priorityBtn.textContent = issue.priority;
+
+    if(issue.priority === "high") priorityBtn.className = "px-3 py-1 text-xs rounded font-semibold bg-red-100 text-red-600";
+  else if(issue.priority === "medium") priorityBtn.className = "px-3 py-1 text-xs rounded font-semibold bg-yellow-100 text-yellow-600";
+  else priorityBtn.className = "px-3 py-1 text-xs rounded font-semibold bg-gray-100 text-gray-600";
+
+
+  document.getElementById("surprise").classList.remove("hidden");
+  document.body.classList.add("bg-blue-50");  
+
+
+})
+
+
+
 container.appendChild(card);
 
 
@@ -161,3 +219,32 @@ displayIssues(allIssues)
 
 loadIssues()
 setTab(document.getElementById("allBtn"));
+
+document.getElementById("modalClose").addEventListener("click", () => {
+  document.getElementById("surprise").classList.add("hidden");
+  document.body.classList.remove("bg-blue-50"); 
+});
+
+
+
+const searchInput = document.getElementById("searchInput")
+
+searchInput.addEventListener("input", function () {
+
+  const searchText = searchInput.value.toLowerCase();
+
+  const issues = document.querySelectorAll(".issue-card");
+
+  issues.forEach(issue => {
+
+    const title = issue.querySelector(".issue-title").textContent.toLowerCase();
+
+    if (title.includes(searchText)) {
+      issue.style.display = "block"
+    } else {
+      issue.style.display = "none"
+    }
+
+  });
+
+});
