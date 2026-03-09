@@ -45,7 +45,7 @@ if(issue.priority==="high"){
 
 
 const statusIcon = issue.status==="open"
-? "assets/Open-status.png" :"assets/Closed- Status .png";
+? "assets/Open-Status.png" :"assets/Closed- Status .png";
 
 
 const topColor = issue.status==="open"
